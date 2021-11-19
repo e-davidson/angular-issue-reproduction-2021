@@ -1,5 +1,12 @@
-<ng-container *appMyLet='counter.state$ as count' appDirective >
+<ng-container *ngrxLet="counter.state$ as count" appDirective >
   {{count}}
 </ng-container>
+
+<!--
+  uncomment for simpler version of the issue
+  <ng-container *appMyLet="counter.state$ as count" appDirective >
+  {{count}}
+</ng-container>
+-->
 
 <button (click)='increment()'  >Increment</button>
